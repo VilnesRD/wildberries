@@ -1,0 +1,63 @@
+plugins {
+    id 'java-library'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+allure {
+    report {
+        version.set("2.20.1")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set("2.20.1")
+            }
+        }
+    }
+}
+
+dependencies {
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter:5.9.1',
+            'com.codeborne:selenide:6.10.1',
+
+            //faker
+            'com.github.javafaker:javafaker:1.0.2',
+
+            //asserts
+            'org.assertj:assertj-core:3.23.1',
+
+            //logging
+            'org.slf4j:slf4j-simple:2.0.5',
+
+            //allure
+            'io.qameta.allure:allure-selenide:2.20.1',
+
+            //csvReader
+            'com.opencsv:opencsv:5.6'
+
+
+    )
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
