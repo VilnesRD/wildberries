@@ -4,19 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/vilnes/Main.java" afterDir="false" />
+    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest">
+      <change afterPath="$PROJECT_DIR$/notification/allure-notifications-4.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/ProjectConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/helpers/Attach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/womanClothes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +59,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -78,18 +77,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/yavil/IdeaProjects/wildberries",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yavil/IdeaProjects/wildberries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Gradle.WebTest">
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="wildberries.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.WebTest.womanBurgerMenuTest">
     <configuration name="WebTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -113,7 +117,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WebTest.appLinkTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WebTest.currencyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +130,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;wildberries.WebTest.appLinkTest&quot;" />
+            <option value="&quot;wildberries.WebTest.currencyTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -136,7 +140,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WebTest.loginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WebTest.pictureSearchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -149,7 +153,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;wildberries.WebTest.loginTest&quot;" />
+            <option value="&quot;wildberries.WebTest.pictureSearchTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,7 +163,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WebTest.searchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WebTest.womanBurgerMenuTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +176,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;wildberries.WebTest.searchTest&quot;" />
+            <option value="&quot;wildberries.WebTest.womanBurgerMenuTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WebTest" />
+        <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
+        <item itemvalue="Gradle.WebTest.pictureSearchTest" />
+        <item itemvalue="Gradle.WebTest.currencyTest" />
         <item itemvalue="Gradle.wildberries [allureServe]" />
-        <item itemvalue="Gradle.WebTest.searchTest" />
-        <item itemvalue="Gradle.WebTest.appLinkTest" />
-        <item itemvalue="Gradle.WebTest.loginTest" />
+        <item itemvalue="Gradle.WebTest" />
       </list>
     </recent_temporary>
   </component>
@@ -222,7 +226,20 @@
       <option name="presentableId" value="Default" />
       <updated>1674019797865</updated>
     </task>
+    <task id="LOCAL-00001" summary="Delete main folder">
+      <created>1674115749796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674115749796</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Delete main folder" />
+    <MESSAGE value="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

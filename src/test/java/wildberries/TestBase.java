@@ -1,23 +1,38 @@
 package wildberries;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-
-import static com.codeborne.selenide.Selenide.open;
+import wildberries.config.ProjectConfiguration;
+import wildberries.config.WebConfig;
+import wildberries.helpers.Attach;
 
 public class TestBase {
+
+    private static WebConfig config;
+    private static ProjectConfiguration configuration;
     @BeforeAll
-    static void setUP() {
-        Configuration.holdBrowserOpen = true;
-        Configuration.browserSize = "1920x1080";
+    static void setUp() {
+        Configuration.timeout = 10000;
+        config = ConfigFactory.create(WebConfig.class, System.getProperties());
+        configuration = new ProjectConfiguration();
+        configuration.webConfig(config);
     }
 
     @BeforeEach
-    void config() throws InterruptedException {
-        open("https://www.wildberries.ru/");
-        Configuration.timeout = 10000;
-        Thread.sleep(4000);
+    void addListener() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
+    @AfterEach
+    void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }
-
