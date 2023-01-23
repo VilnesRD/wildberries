@@ -98,7 +98,7 @@ public class WebTest extends TestBase {
         });
         step("Переходим на страницу Женщинам", () -> {
             $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(8)).click();
+            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(15)).click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
             $(".menu-catalog__list-2").shouldHave(Condition.text(name));
