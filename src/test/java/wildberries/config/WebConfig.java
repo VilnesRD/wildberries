@@ -1,27 +1,37 @@
-package wildberries.config;
+package config;
 
 import org.aeonbits.owner.Config;
 
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "classpath:${env}.properties"
-})
+        "system:properties",
+        "classpath:${env}.properties"})
 public interface WebConfig extends Config {
 
-    @Key("base_url")
-    String getBaseUrl();
+    @Key("browserName")
+    String getBrowserName();
 
-    @Key("browser")
-    String getBrowser();
-
-    @Key("browser_ver")
+    @Key("browserVersion")
     String getBrowserVersion();
 
-    @Key("screen_resolution")
-    String getScreenResolution();
+    @Key("baseUrl")
+    String getBaseUrl();
+
+    @Key("browserSize")
+    String getBrowserSize();
 
     @Key("isRemote")
-    Boolean IsRemote();
+    Boolean isRemote();
 
-    @Key("remote")
-    String getRemote();
+    @Key("remoteUrl")
+    String getRemoteUrl();
+
+    @Key("pageLoadTimeout")
+    Long getPageLoadTimeout();
+
+    @Key("timeout")
+    Long getTimeout();
+
+    @Key("headless")
+    Boolean isHeadless();
 }

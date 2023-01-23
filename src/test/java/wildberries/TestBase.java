@@ -1,37 +1,27 @@
 package wildberries;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import github.config.ConfigReader;
+import github.config.ProjectConfiguration;
+import github.config.WebConfig;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import wildberries.config.ProjectConfiguration;
-import wildberries.config.WebConfig;
 
-public class TestBase {
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
-    private static WebConfig config;
-    private static ProjectConfiguration configuration;
+public class BaseTest {
+
+    private static final WebConfig webConfig = ConfigReader.read();
     @BeforeAll
-    static void setUp() {
-        Configuration.timeout = 10000;
-        config = ConfigFactory.create(WebConfig.class, System.getProperties());
-        configuration = new ProjectConfiguration();
-        configuration.webConfig(config);
-    }
-
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    public static void setUp() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        ProjectConfiguration projectConfiguration = new ProjectConfiguration(webConfig);
+        projectConfiguration.webConfig();
     }
 
     @AfterEach
-    void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
+    public void tearDown() {
+        closeWebDriver();
     }
 }

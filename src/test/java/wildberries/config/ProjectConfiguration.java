@@ -1,18 +1,27 @@
-package wildberries.config;
+package config;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ProjectConfiguration {
 
-    public void webConfig(WebConfig config) {
-        Configuration.baseUrl = config.getBaseUrl();
-        Configuration.browser = config.getBrowser();
-        Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.browserSize = config.getScreenResolution();
+    private final WebConfig webConfig;
 
-        if (config.IsRemote()) {
-            Configuration.remote = config.getRemote();
+    public ProjectConfiguration(WebConfig webConfig) {
+        this.webConfig = webConfig;
+    }
+
+    public void webConfig() {
+        Configuration.baseUrl = webConfig.getBaseUrl();
+        Configuration.browser = webConfig.getBrowserName();
+        Configuration.browserVersion = webConfig.getBrowserVersion();
+        Configuration.browserSize = webConfig.getBrowserSize();
+        Configuration.pageLoadTimeout = webConfig.getPageLoadTimeout();
+        Configuration.timeout = webConfig.getTimeout();
+        Configuration.headless = webConfig.isHeadless();
+
+        if (webConfig.isRemote()) {
+            Configuration.remote = webConfig.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
