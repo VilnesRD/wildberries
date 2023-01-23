@@ -14,8 +14,9 @@ public class TestBase {
 
     @BeforeAll
     public static void testBaseUrlConfiguration() {
-        Configuration.pageLoadTimeout = 50000;
-        Configuration.baseUrl = System.getProperty("baseUrl","https://rit-it.com");
+        Configuration.pageLoadTimeout = 10000;
+        Configuration.timeout = 8000;
+        Configuration.baseUrl = System.getProperty("baseUrl","https://www.wildberries.ru/");
         Configuration.browserSize = System.getProperty("resolution", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.remote = System.getProperty("selenoideURL", "https://user1:1234@selenoid.autotests.cloud") + "/wd/hub";

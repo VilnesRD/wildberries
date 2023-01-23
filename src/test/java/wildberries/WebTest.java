@@ -24,6 +24,9 @@ public class WebTest extends TestBase {
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка смены валюты в карточке товара")
     void currencyTest() {
+        step("Открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("Выбираем валюту", () -> {
             $("ul.header__simple-menu li").hover();
             $("form.popup__form label", 2).click();
@@ -43,6 +46,9 @@ public class WebTest extends TestBase {
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка поиска по картинке")
     void pictureSearchTest() {
+        step("Открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("В поисковой строке выбираем поиск по изображению", () -> {
             $("#searchByImageContainer button").click();
         });
@@ -61,6 +67,9 @@ public class WebTest extends TestBase {
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка открытия страницы приложения wb в google play")
     void appLinkTest() {
+        step("Открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("Переходим на страницу приложения wb в google play по ссылке на сайте wb", () -> {
             $("a.google-play").click();
             switchTo().window(1);
@@ -77,6 +86,9 @@ public class WebTest extends TestBase {
     @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Проверка наличия вкладок в разделе Женщинам")
     void womanBurgerMenuTest(String name) {
+        step("Открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("Переходим на страницу Женщинам", () -> {
             $(".nav-element__burger").shouldBe(Condition.visible,Duration.ofSeconds(8)).click();
             $("ul.menu-burger__main-list li").click();
@@ -96,6 +108,9 @@ public class WebTest extends TestBase {
     @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Проверка работы поиска при введении названия товара")
     void searchTest(String search, String expected) {
+        step("Открываем главную страницу", () -> {
+            open("https://www.wildberries.ru/");
+        });
         step("Вводим в строку поиска название товара", () -> {
             $("#searchInput").shouldBe(Condition.visible, Duration.ofSeconds(15)).click();
             $("#searchInput").setValue(search);
