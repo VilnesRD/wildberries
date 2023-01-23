@@ -14,8 +14,8 @@ public class TestBase {
 
     @BeforeAll
     public static void testBaseUrlConfiguration() {
-        Configuration.pageLoadTimeout = 10000;
-        Configuration.timeout = 8000;
+        Configuration.pageLoadTimeout = 15000;
+        Configuration.timeout = 10000;
         Configuration.baseUrl = System.getProperty("baseUrl","https://www.wildberries.ru/");
         Configuration.browserSize = System.getProperty("resolution", "1920x1080");
         Configuration.browser = System.getProperty("browser", "chrome");

@@ -12,6 +12,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.Duration;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
@@ -33,7 +34,7 @@ public class WebTest extends TestBase {
             $("form.popup__form label", 2).click();
         });
         step("В поисковой строке вводим название товара", () -> {
-            $("#searchInput").shouldBe(Condition.visible, Duration.ofSeconds(15)).click();
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
             $("#searchInput").setValue("iphone");
             $("#applySearchBtn").click();
         });
@@ -51,13 +52,13 @@ public class WebTest extends TestBase {
             Selenide.open("https://www.wildberries.ru/");
         });
         step("В поисковой строке выбираем поиск по изображению", () -> {
-            $("#searchByImageContainer button").click();
+            $("#searchByImageContainer button").shouldBe(visible,Duration.ofSeconds(15)).click();
         });
         step("Загружаем картинку", () -> {
             $("label.upload-photo-btn input").uploadFromClasspath("s22.jpeg");
         });
         step("Проверяем, что выдача поиска содержит товары", () -> {
-            $(".product-card__brand").$("p.product-card__brand-name span")
+            $(".product-card__brand").shouldBe(visible,Duration.ofSeconds(15)).$("p.product-card__brand-name span")
                     .shouldHave(Condition.text("Samsung"));
         });
     }
@@ -92,7 +93,7 @@ public class WebTest extends TestBase {
         });
         step("Переходим на страницу Женщинам", () -> {
             $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").click();
+            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(15)).click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
             $(".menu-catalog__list-2").shouldHave(Condition.text(name));
@@ -113,7 +114,7 @@ public class WebTest extends TestBase {
             Selenide.open("https://www.wildberries.ru/");
         });
         step("Вводим в строку поиска название товара", () -> {
-            $("#searchInput").shouldBe(Condition.visible, Duration.ofSeconds(15)).click();
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
             $("#searchInput").setValue(search);
             $("#applySearchBtn").click();
         });
