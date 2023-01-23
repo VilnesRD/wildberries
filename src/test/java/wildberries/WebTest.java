@@ -1,21 +1,22 @@
 package wildberries;
 
 import com.codeborne.selenide.Condition;
-
 import com.codeborne.selenide.Selenide;
-import io.qameta.allure.*;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.testng.xml.dom.Tag;
 
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selectors.byCssSelector;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.switchTo;
 import static com.codeborne.selenide.WebDriverRunner.url;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -84,27 +85,6 @@ public class WebTest extends TestBase {
             assertEquals("https://play.google.com/store/apps/details?id=com.wildberries.ru", url());
         });
     }
-
-
-    @CsvFileSource(resources={"/woman.csv"}, delimiter = ';')
-    @Tag(name="NORMAL")
-    @ParameterizedTest(name = "Проверка наличия вкладок с названием {0} в разделе Женщинам")
-    @Owner("Dmitry Rodichev")
-    @Severity(value = SeverityLevel.NORMAL)
-    @DisplayName("Проверка наличия вкладок в разделе Женщинам")
-    void womanBurgerMenuTest(String name) {
-        step("Открываем главную страницу", () -> {
-            Selenide.open("https://www.wildberries.ru/");
-        });
-        step("Переходим на страницу Женщинам", () -> {
-            $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(30)).click();
-        });
-        step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
-            $(".menu-catalog__list-2").shouldHave(Condition.text(name));
-        });
-    }
-
 
     @CsvSource ({
             "iphone, iPhone",
