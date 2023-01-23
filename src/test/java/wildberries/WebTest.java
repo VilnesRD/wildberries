@@ -62,7 +62,7 @@ public class WebTest extends TestBase {
         });
         step("Проверяем, что выдача поиска содержит товары", () -> {
             $("div.product-card__brand").$("p.product-card__brand-name span").
-                    shouldBe(visible,Duration.ofSeconds(15)).shouldHave(Condition.text("Samsung"));
+                    shouldBe(visible,Duration.ofSeconds(20)).shouldHave(Condition.text("Samsung"));
         });
     }
 
@@ -98,7 +98,7 @@ public class WebTest extends TestBase {
         });
         step("Переходим на страницу Женщинам", () -> {
             $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(20)).click();
+            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(30)).click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
             $(".menu-catalog__list-2").shouldHave(Condition.text(name));
