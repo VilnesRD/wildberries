@@ -17,7 +17,7 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WebTest extends TestBest {
+public class WebTest extends TestBase {
 
     @Test
     @Owner("Dmitry Rodichev")
