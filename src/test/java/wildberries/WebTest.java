@@ -21,7 +21,7 @@ import static com.codeborne.selenide.WebDriverRunner.url;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WebTest extends TestBase {
+class WebTest extends TestBase {
 
     @Test
     @Tag(name="CRITICAL")
@@ -62,8 +62,8 @@ public class WebTest extends TestBase {
             $("label.upload-photo-btn input").uploadFromClasspath("s22.jpeg");
         });
         step("Проверяем, что выдача поиска содержит товары", () -> {
-            $("div.product-card__brand").$("p.product-card__brand-name span").
-                    shouldBe(visible,Duration.ofSeconds(20)).shouldHave(Condition.text("Samsung"));
+            $("div.product-card__brand").$("p.product-card__brand-name span",1).
+                    shouldBe(visible,Duration.ofSeconds(20)).shouldHave(Condition.text("Galaxy"));
         });
     }
 
@@ -88,7 +88,7 @@ public class WebTest extends TestBase {
 
     @CsvSource ({
             "iphone, iPhone",
-            "Samsung, Samsung",
+            "s21 смартфон, Galaxy",
     })
     @ParameterizedTest
     @Tag(name="CRITICAL")
@@ -102,10 +102,10 @@ public class WebTest extends TestBase {
         step("Вводим в строку поиска название товара", () -> {
             $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
             $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).setValue(search);
-            $("#applySearchBtn").click();
+            $("#applySearchBtn").shouldBe(visible).click();
         });
         step("Проверяем, что открылась страница с , соответствующего производителя", () -> {
-            $(".product-card__brand").$("p.product-card__brand-name span", 1).shouldBe(visible, Duration.ofSeconds(7))
+            $(".product-card__brand").$("p.product-card__brand-name span", 1).shouldBe(visible, Duration.ofSeconds(20))
                     .shouldHave(Condition.text(expected));
         });
     }
