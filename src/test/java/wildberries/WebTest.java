@@ -100,12 +100,12 @@ class WebTest extends TestBase {
             Selenide.open("https://www.wildberries.ru/");
         });
         step("Вводим в строку поиска название товара", () -> {
-            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
-            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).setValue(search);
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(30)).click();
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(30)).setValue(search);
             $("#applySearchBtn").shouldBe(visible).click();
         });
         step("Проверяем, что открылась страница с , соответствующего производителя", () -> {
-            $(".product-card__brand").$("p.product-card__brand-name span", 1).shouldBe(visible, Duration.ofSeconds(20))
+            $(".product-card__brand").$("p.product-card__brand-name span", 1).shouldBe(visible, Duration.ofSeconds(30))
                     .shouldHave(Condition.text(expected));
         });
     }
