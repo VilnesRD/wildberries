@@ -108,7 +108,7 @@ public class WebTest extends TestBase {
 
     @CsvSource ({
             "iphone, iPhone",
-            "s21, Galaxy",
+            "Samsung, Samsung",
     })
     @ParameterizedTest
     @Tag(name="CRITICAL")
