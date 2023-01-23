@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import wildberries.config.ProjectConfiguration;
 import wildberries.config.WebConfig;
-import wildberries.helpers.Attach;
 
 public class TestBase {
 

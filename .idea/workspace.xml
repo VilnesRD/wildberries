@@ -4,21 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest">
-      <change afterPath="$PROJECT_DIR$/notification/allure-notifications-4.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/ProjectConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/helpers/Attach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/womanClothes.csv" afterDir="false" />
+    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Update all project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/helpers/Attach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/Attach.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -233,13 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674115749796</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update all project">
+      <created>1674211606362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674211606362</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete main folder" />
     <MESSAGE value="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest" />
+    <MESSAGE value="Update all project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update all project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
