@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Added timeout">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <recent name="C:\Users\yavil\IdeaProjects\wildberries\src\test\java\wildberries\helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WebTest">
+  <component name="RunManager" selected="Gradle.WebTest.womanBurgerMenuTest">
     <configuration name="WebTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
+        <item itemvalue="Gradle.WebTest.pictureSearchTest" />
         <item itemvalue="Gradle.WebTest" />
         <item itemvalue="Gradle.wildberries [allureServe]" />
-        <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
         <item itemvalue="Gradle.wildberries [dependencies]" />
-        <item itemvalue="Gradle.WebTest.pictureSearchTest" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674466746927</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added timeout">
+      <created>1674467114004</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674467114004</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
