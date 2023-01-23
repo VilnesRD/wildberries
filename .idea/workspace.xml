@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Update all project, added config, owner">
-      <change afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/ConfigReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/config/ProjectConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/ProjectConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/config/ConfigReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/config/ProjectConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/helpers/Attach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/helpers/Attach.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,50 +78,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/yavil/IdeaProjects/wildberries",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Console"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yavil/IdeaProjects/wildberries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="wildberries" />
       <recent name="wildberries.config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yavil\IdeaProjects\wildberries\src\test\java\wildberries\helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WebTest.womanBurgerMenuTest">
-    <configuration name="WebTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;wildberries.WebTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.wildberries [dependencies]">
     <configuration name="WebTest.currencyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,13 +190,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="wildberries [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.wildberries [dependencies]" />
         <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
         <item itemvalue="Gradle.WebTest.pictureSearchTest" />
         <item itemvalue="Gradle.WebTest.currencyTest" />
         <item itemvalue="Gradle.wildberries [allureServe]" />
-        <item itemvalue="Gradle.WebTest" />
       </list>
     </recent_temporary>
   </component>
@@ -257,8 +258,26 @@
       <option name="project" value="LOCAL" />
       <updated>1674457777885</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update all project, added config, owner">
+      <created>1674459021509</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674459021509</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete main folder" />
