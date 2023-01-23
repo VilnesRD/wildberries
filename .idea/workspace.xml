@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Added timeout">
+    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Update timeout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" afterDir="false" />
@@ -95,7 +95,7 @@
       <recent name="C:\Users\yavil\IdeaProjects\wildberries\src\test\java\wildberries\helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WebTest.womanBurgerMenuTest">
+  <component name="RunManager" selected="Gradle.wildberries [allureServe]">
     <configuration name="WebTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,10 +209,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.wildberries [allureServe]" />
+        <item itemvalue="Gradle.WebTest" />
         <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
         <item itemvalue="Gradle.WebTest.pictureSearchTest" />
-        <item itemvalue="Gradle.WebTest" />
-        <item itemvalue="Gradle.wildberries [allureServe]" />
         <item itemvalue="Gradle.wildberries [dependencies]" />
       </list>
     </recent_temporary>
@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674467114004</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update timeout">
+      <created>1674468232417</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674468232417</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -339,7 +346,8 @@
     <MESSAGE value="Added open" />
     <MESSAGE value="Update csv file" />
     <MESSAGE value="Added timeout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added timeout" />
+    <MESSAGE value="Update timeout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update timeout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

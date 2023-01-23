@@ -125,7 +125,7 @@ public class WebTest extends TestBase {
             $("#applySearchBtn").click();
         });
         step("Проверяем, что открылась страница с , соответствующего производителя", () -> {
-            $(".product-card__brand").$("p.product-card__brand-name span", 1)
+            $(".product-card__brand").$("p.product-card__brand-name span", 1).shouldBe(visible, Duration.ofSeconds(7))
                     .shouldHave(Condition.text(expected));
         });
     }
