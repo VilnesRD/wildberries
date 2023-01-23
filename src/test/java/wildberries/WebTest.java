@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.testng.xml.dom.Tag;
 
 import java.time.Duration;
 
@@ -22,6 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class WebTest extends TestBase {
 
     @Test
+    @Tag(name="CRITICAL")
     @Owner("Dmitry Rodichev")
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка смены валюты в карточке товара")
@@ -44,6 +46,7 @@ public class WebTest extends TestBase {
     }
 
     @Test
+    @Tag(name="CRITICAL")
     @Owner("Dmitry Rodichev")
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка поиска по картинке")
@@ -65,6 +68,7 @@ public class WebTest extends TestBase {
 
 
     @Test
+    @Tag(name="CRITICAL")
     @Owner("Dmitry Rodichev")
     @Severity(value = io.qameta.allure.SeverityLevel.CRITICAL)
     @DisplayName("Проверка открытия страницы приложения wb в google play")
@@ -83,6 +87,7 @@ public class WebTest extends TestBase {
 
 
     @CsvFileSource(resources={"/woman.csv"}, delimiter = ';')
+    @Tag(name="NORMAL")
     @ParameterizedTest(name = "Проверка наличия вкладок с названием {0} в разделе Женщинам")
     @Owner("Dmitry Rodichev")
     @Severity(value = SeverityLevel.NORMAL)
@@ -106,6 +111,7 @@ public class WebTest extends TestBase {
             "s21, Galaxy",
     })
     @ParameterizedTest
+    @Tag(name="CRITICAL")
     @Owner("Dmitry Rodichev")
     @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Проверка работы поиска при введении названия товара")
