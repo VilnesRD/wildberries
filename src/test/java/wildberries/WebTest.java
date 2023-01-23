@@ -37,7 +37,7 @@ public class WebTest extends TestBase {
         });
         step("В поисковой строке вводим название товара", () -> {
             $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
-            $("#searchInput").setValue("iphone");
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).setValue("iphone");
             $("#applySearchBtn").click();
         });
         step("Проверяем, что цена товара отображается в выбранной валюте", () -> {
@@ -98,7 +98,7 @@ public class WebTest extends TestBase {
         });
         step("Переходим на страницу Женщинам", () -> {
             $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(15)).click();
+            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(20)).click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
             $(".menu-catalog__list-2").shouldHave(Condition.text(name));
@@ -121,7 +121,7 @@ public class WebTest extends TestBase {
         });
         step("Вводим в строку поиска название товара", () -> {
             $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).click();
-            $("#searchInput").setValue(search);
+            $("#searchInput").shouldBe(visible, Duration.ofSeconds(15)).setValue(search);
             $("#applySearchBtn").click();
         });
         step("Проверяем, что открылась страница с , соответствующего производителя", () -> {
