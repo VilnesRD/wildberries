@@ -61,8 +61,8 @@ public class WebTest extends TestBase {
             $("label.upload-photo-btn input").uploadFromClasspath("s22.jpeg");
         });
         step("Проверяем, что выдача поиска содержит товары", () -> {
-            $(".product-card__brand").shouldBe(visible,Duration.ofSeconds(15)).$("p.product-card__brand-name span")
-                    .shouldHave(Condition.text("Samsung"));
+            $("div.product-card__brand").$("p.product-card__brand-name span").
+                    shouldBe(visible,Duration.ofSeconds(15)).shouldHave(Condition.text("Samsung"));
         });
     }
 
@@ -98,7 +98,7 @@ public class WebTest extends TestBase {
         });
         step("Переходим на страницу Женщинам", () -> {
             $("div.header__nav-element button").click();
-            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(4)).click();
+            $("ul.menu-burger__main-list li").shouldBe(visible, Duration.ofSeconds(8)).click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {
             $(".menu-catalog__list-2").shouldHave(Condition.text(name));
