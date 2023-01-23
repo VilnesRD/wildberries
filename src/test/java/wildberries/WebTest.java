@@ -56,14 +56,14 @@ class WebTest extends TestBase {
             Selenide.open("https://www.wildberries.ru/");
         });
         step("В поисковой строке выбираем поиск по изображению", () -> {
-            $("#searchByImageContainer button").shouldBe(visible,Duration.ofSeconds(15)).click();
+            $("#searchByImageContainer button").shouldBe(visible,Duration.ofSeconds(30)).click();
         });
         step("Загружаем картинку", () -> {
-            $("label.upload-photo-btn input").uploadFromClasspath("s22.jpeg");
+            $("label.upload-photo-btn input").shouldBe(visible,Duration.ofSeconds(30)).uploadFromClasspath("s22.jpeg");
         });
         step("Проверяем, что выдача поиска содержит товары", () -> {
             $("div.product-card__brand").$("p.product-card__brand-name span",1).
-                    shouldBe(visible,Duration.ofSeconds(20)).shouldHave(Condition.text("Galaxy"));
+                    shouldBe(visible,Duration.ofSeconds(30)).shouldHave(Condition.text("Galaxy"));
         });
     }
 
