@@ -81,7 +81,7 @@ public class WebTest extends TestBase {
     }
 
 
-    @CsvFileSource(resources = "/womanClothes.csv")
+    @CsvFileSource(resources={"/woman.csv"}, delimiter = ';')
     @ParameterizedTest(name = "Проверка наличия вкладок с названием {0} в разделе Женщинам")
     @Owner("Dmitry Rodichev")
     @Severity(value = SeverityLevel.NORMAL)
@@ -91,7 +91,7 @@ public class WebTest extends TestBase {
             Selenide.open("https://www.wildberries.ru/");
         });
         step("Переходим на страницу Женщинам", () -> {
-            $(".nav-element__burger").shouldBe(Condition.visible,Duration.ofSeconds(8)).click();
+            $("div.header__nav-element button").click();
             $("ul.menu-burger__main-list li").click();
         });
         step("Проверяем, что открылась страница Женщинам со списком вкладок {0}", () -> {

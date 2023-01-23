@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Update all project">
+    <list default="true" id="df972917-f97f-441f-9779-08f0a451cd78" name="Changes" comment="Added open">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/TestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wildberries/WebTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/womanClothes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/woman.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <recent name="C:\Users\yavil\IdeaProjects\wildberries\src\test\java\wildberries\helpers" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WebTest">
+  <component name="RunManager" selected="Gradle.wildberries [allureServe]">
     <configuration name="WebTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -110,29 +110,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;wildberries.WebTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="WebTest.currencyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;wildberries.WebTest.currencyTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -188,6 +165,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="wildberries [allureServe]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="allureServe" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="wildberries [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.wildberries [allureServe]" />
+        <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
         <item itemvalue="Gradle.WebTest" />
         <item itemvalue="Gradle.wildberries [dependencies]" />
-        <item itemvalue="Gradle.WebTest.womanBurgerMenuTest" />
         <item itemvalue="Gradle.WebTest.pictureSearchTest" />
-        <item itemvalue="Gradle.WebTest.currencyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674461627380</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added open">
+      <created>1674461955368</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674461955368</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +301,8 @@
     <MESSAGE value="Added Attach (video,scr., etc.), Update: build.gradle, TestBase, WebTest" />
     <MESSAGE value="Update all project, added config, owner" />
     <MESSAGE value="Update all project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update all project" />
+    <MESSAGE value="Added open" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added open" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
